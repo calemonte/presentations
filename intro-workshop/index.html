@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Intro to reveal.js</title>
+
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/reveal.css" />
+    <link rel="stylesheet" href="../css/theme/black.css" id="theme" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../lib/css/monokai.css" />
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "../css/print/pdf.css"
+        : "../css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Title slide -->
+        <section
+          data-background-image="https://media3.giphy.com/media/GdNqdBXFeAjbG/giphy.gif?cid=790b76112303e38d1ab9b8ee6c67d9aee085b5783f7fdcb7&rid=giphy.gif"
+        >
+          <h2>
+            How to Make Awesome Presentations with Reveal.js
+          </h2>
+        </section>
+        <!-- What is Reveal.js? -->
+        <section>
+          <section data-background="#1B70A6">
+            <h2>What is Reveal.js?</h2>
+          </section>
+          <section>
+            A (free) framework developed by Hakim El Hattab for easily creating
+            beautiful presentations using HTML.
+          </section>
+          <section>
+            Why use Reveal.js?
+            <p class="fragment fade-in-then-semi-out">
+              Embed external websites in your slides
+            </p>
+            <p class="fragment fade-in-then-semi-out">
+              Display videos, gifs, and images as backgrounds
+            </p>
+            <p class="fragment fade-in-then-semi-out">
+              Produce non-linear pathways through content
+            </p>
+            <p class="fragment fade-in-then-semi-out">
+              Create custom styles and themes
+            </p>
+            <p class="fragment fade-in-then-semi-out">
+              Export your presentation for easy hosting on the web
+            </p>
+            <p class="fragment fade-in-then-semi-out">
+              Interesting features like multiplexing
+            </p>
+            <p class="fragment fade-in-then-semi-out">
+              It's open source and extremely customizable
+            </p>
+          </section>
+          <section>
+            <pre>
+              <code class="hljs html" data-trim>
+                &lt;section
+                  data-transition="slide" 
+                  data-background="rgb(77, 126, 101)" 
+                  data-background-transition="zoom"
+                &gt;
+                  &lt;p style="color: white"&gt;
+                    This is a super rad slide!
+                  &lt;/p&gt;
+                  &lt;img data-src="images/mindblown.gif" /&gt;
+                &lt;/section&gt;
+              </code>
+              </pre>
+          </section>
+          <section
+            data-transition="slide"
+            data-background="rgb(77, 126, 101)"
+            data-background-transition="zoom"
+          >
+            <p style="color: white">This is a super rad slide!</p>
+            <img data-src="images/mindblown.gif" />
+          </section>
+        </section>
+        <!-- Workshop overview -->
+        <section>
+          <section data-background="#1B70A6">
+            <h2>Workshop Overview</h2>
+          </section>
+          <section>
+            Setting up your environment
+          </section>
+          <section>
+            Folder structure
+          </section>
+          <section>
+            Basic slide authoring syntax
+          </section>
+          <section>
+            Speaker notes and other advanced features
+          </section>
+          <section>
+            Styling your slides
+          </section>
+          <section>
+            Presenting in the wild
+          </section>
+        </section>
+        <!-- Setting up your environment -->
+        <section>
+          <section data-background="#1B70A6">
+            <h2>Setting up your environment</h2>
+          </section>
+          <section>
+            Download a code editor
+          </section>
+          <section>
+            <p>
+              Visual Studio Code
+              <br />
+              <small style="color: dodgerblue;"
+                >https://code.visualstudio.com</small
+              >
+            </p>
+            <p>
+              Atom
+              <br />
+              <small style="color: dodgerblue;">https://atom.io</small>
+            </p>
+            <p>
+              Sublime Text ($ for some features)
+              <br />
+              <small style="color: dodgerblue;"
+                >https://www.sublimetext.com</small
+              >
+            </p>
+            <p>
+              Notepad++ (Windows/Linux)
+              <br />
+              <small style="color: dodgerblue;"
+                >https://notepad-plus-plus.org</small
+              >
+            </p>
+            <p>
+              BBEdit (Mac)($ for some features)
+              <br />
+              <small style="color: dodgerblue;"
+                >https://www.barebones.com/products/bbedit/</small
+              >
+            </p>
+          </section>
+          <section>
+            Download the reveal.js files
+          </section>
+          <section>
+            <p>
+              <code>https://github.com/hakimel/reveal.js</code>
+            </p>
+            <img data-src="images/downloadzip.png" />
+
+            <!-- <pre>
+              <code class="hljs http" data-trim>
+                https://github.com/hakimel/reveal.js
+              </code>
+            </pre> -->
+          </section>
+          <section>
+            Unzip and move <code>reveal.js-master</code> folder to your Desktop
+          </section>
+          <section>
+            Navigate to folder and open <code>index.html</code> in your browser.
+            You should see...
+          </section>
+          <section>
+            Slide 1
+          </section>
+          <section>
+            Slide 2
+          </section>
+        </section>
+        <!-- Exploring the folder structure section -->
+        <section>
+          <section data-background="#1B70A6">
+            <h2>Folder structure</h2>
+          </section>
+          <section>
+            Open the entire reveal.js folder in your code editor
+          </section>
+          <section>
+            <h4>The reveal.js folder overview</h4>
+            <ul>
+              <li class="fragment fade-in-then-semi-out">
+                <strong>index.html</strong>: Main file that you'll edit to add
+                slides
+              </li>
+              <li class="fragment fade-in-then-semi-out">
+                <strong>css</strong>: Core styles without which the project does
+                not function (also contains other default themes)
+              </li>
+              <li class="fragment fade-in-then-semi-out">
+                <strong>js</strong>: Like CSS but for JavaScript
+              </li>
+              <li class="fragment fade-in-then-semi-out">
+                <strong>plugin</strong>: Components that have been developed as
+                extensions to reveal.js
+              </li>
+              <li class="fragment fade-in-then-semi-out">
+                <strong>lib</strong>: All other third party assets (JavaScript,
+                CSS, fonts)
+              </li>
+            </ul>
+            <p class="fragment fade-up">
+              <em>Everything else you can ignore </em><span>&#128526;</span>
+            </p>
+          </section>
+        </section>
+        <!-- Basic slide authoring syntax -->
+        <section>
+          <section data-background="#1B70A6">
+            <h2>Basic slide authoring</h2>
+          </section>
+          <!-- HTML/CSS/JS intro -->
+          <section
+            data-background-image="https://media1.giphy.com/media/kwCJA4NGu2PtMzpxGb/giphy.gif?cid=790b761186bfb5605b097bc3eb34935a0bf502d20f30e51c&rid=giphy.gif"
+          >
+            <p>
+              ...but first! A superduper, crazy attentuated HTML/CSS/JS intro
+            </p>
+          </section>
+          <section>
+            HTML
+            <pre>
+              <code class="hljs html" data-trim>
+                &lt;body&gt;
+                  &lt;div&gt;
+                    &lt;h1&gt;I'm the title of the page!&lt;/h1&gt;
+                    &lt;h2&gt;I'm some level 2 heading text!&lt;/h2&gt;
+                    &lt;p&gt;
+                      And I'm some delightful paragraph text, including &lt;strong&gt;bold&lt;/strong&gt;
+                      and &lt;em&gt;italics&lt;/em&gt;!
+                    &lt;/p&gt;  
+                    &lt;button&gt;I'm a clickable button!&lt;/button&gt;             
+                  &lt;/div&gt;
+                &lt;/body&gt;
+              </code>
+            </pre>
+          </section>
+          <section>
+            HTML (with attributes)
+            <pre>
+                <code class="hljs html" data-trim>
+                  &lt;body&gt;
+                    &lt;div id="intro" class="featured container"&gt;
+                      &lt;h1 id="intro-head"&gt;I'm the title of the page&lt;/h1&gt;
+                      &lt;h2 class="subtitle fade-out"&gt;I'm some level 2 heading text!&lt;/h2&gt;
+                      &lt;p id="intro-text"&gt;
+                        And I'm some delightful paragraph text, including &lt;strong&gt;bold&lt;/strong&gt;
+                        and &lt;em&gt;italics&lt;/em&gt;!
+                      &lt;/p&gt;
+                      &lt;button id="intro-button"&gt;I'm a clickable button!&lt;/button&gt;                       
+                    &lt;/div&gt;
+                  &lt;/body&gt;
+                </code>
+              </pre>
+          </section>
+          <section>
+            Cascading Style Sheets (CSS)
+            <pre>
+                <code class="hljs css" data-trim>
+                  body {
+                    font-family: "Source Sans Pro", Helvetica, sans-serif;
+                    font-size: 12px;
+                    font-weight: normal;
+                    color: #fff;
+                  }
+                
+                  #intro {
+                    margin: 2em auto;
+                    padding: 1em;
+                  }
+
+                  .featured {
+                    border: dotted black 2px;
+                    background: yellow;
+                    color: blue;
+                  }
+                </code>
+              </pre>
+          </section>
+          <section>
+            JavaScript (JS)
+            <pre>
+              <code class="hljs javascript" data-trim>
+                // Grab a reference to our button
+                const introButton = document.querySelector('#intro-button');
+                
+                // Change the text of our introduction
+                function changeIntroText() {
+                  const introText = document.querySelector('#intro-text');
+                  introText.innerHTML = 'This is my new intro text!';
+                }
+
+                // When the intro button is clicked, execute the function above
+                introButton.addEventListener('click', changeIntroText);   
+              </code>
+            </pre>
+          </section>
+          <section>
+            <p>For more web development help</p>
+            <p>
+              <code>https://developer.mozilla.org/en-US/docs/Learn</code>
+            </p>
+          </section>
+          <section
+            data-background-image="https://media.giphy.com/media/xT0BKHDL64KomoidDG/giphy.gif"
+          >
+            Ok, got it. Can we make some slides now?
+          </section>
+          <!-- How to make basic slides  -->
+          <section>
+            <p>Adding a "horizontal" slide</p>
+            <small>Start on <code>index.html</code>, line 26</small>
+            <pre>
+              <code class="hljs html" data-line-numbers="5" data-trim>
+                &lt;div class="reveal"&gt;
+                  &lt;div class="slides"&gt;
+                    &lt;section&gt;Slide 1&lt;/section&gt;
+                    &lt;section&gt;Slide 2&lt;/section&gt;
+                    &lt;section&gt;I'm a new horizontal slide!&lt;/section&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code>
+            </pre>
+          </section>
+          <section>
+            <p>Adding a "vertical" slide</p>
+            <pre>
+              <code class="hljs html" data-line-numbers="5-6, 8-9" data-trim>
+                &lt;div class="reveal"&gt;
+                  &lt;div class="slides"&gt;
+                    &lt;section&gt;Slide 1&lt;/section&gt;
+                    &lt;section&gt;Slide 2&lt;/section&gt;
+                    &lt;!-- Notice the section nested within a section --&gt;
+                    &lt;section&gt;
+                      &lt;section&gt;I'm a new horizontal slide!&lt;/section&gt;
+                      &lt;section&gt;I'm a new vertical slide one level below!&lt;/section&gt;
+                    &lt;/section&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code>
+            </pre>
+          </section>
+          <section>
+            <p>Adding content to a slide</p>
+            <pre>
+                <code class="hljs html" data-line-numbers="9-17" data-trim>
+                  &lt;div class="reveal"&gt;
+                    &lt;div class="slides"&gt;
+                      &lt;section&gt;Slide 1&lt;/section&gt;
+                      &lt;section&gt;Slide 2&lt;/section&gt;
+                      &lt;section&gt;
+                        &lt;section&gt;I'm a new horizontal slide!&lt;/section&gt;
+                        &lt;section&gt;I'm a new vertical slide one level below!&lt;/section&gt;
+                      &lt;/section&gt;
+                      &lt;section&gt;
+                        &lt;h2&gt;This is my slide's title&lt;/h2&gt;
+                        &lt;p&gt;Here's some interesting content to captivate my audience!&lt;/p&gt;
+                        &lt;ul&gt;
+                          &lt;li&gt;List item # 1&lt;/li&gt;
+                          &lt;li&gt;List item # 2&lt;/li&gt;
+                          &lt;li&gt;List item # 3&lt;/li&gt;
+                        &lt;/ul&gt;
+                      &lt;/section&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                </code>
+              </pre>
+          </section>
+          <section>
+            <p>Adding an image to a slide</p>
+            <pre>
+                <code class="hljs html" data-line-numbers="18-20" data-trim>
+                  &lt;div class="reveal"&gt;
+                    &lt;div class="slides"&gt;
+                      &lt;section&gt;Slide 1&lt;/section&gt;
+                      &lt;section&gt;Slide 2&lt;/section&gt;
+                      &lt;section&gt;
+                        &lt;section&gt;I'm a new horizontal slide!&lt;/section&gt;
+                        &lt;section&gt;I'm a new vertical slide one level below!&lt;/section&gt;
+                      &lt;/section&gt;
+                      &lt;section&gt;
+                        &lt;h2&gt;This is my slide's title&lt;/h2&gt;
+                        &lt;p&gt;Here's some interesting content to captivate my audience!&lt;/p&gt;
+                        &lt;ul&gt;
+                          &lt;li&gt;List item # 1&lt;/li&gt;
+                          &lt;li&gt;List item # 2&lt;/li&gt;
+                          &lt;li&gt;List item # 3&lt;/li&gt;
+                        &lt;/ul&gt;
+                      &lt;/section&gt;
+                      &lt;section&gt;
+                        &lt;img data-src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"/&gt;
+                      &lt;/section&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                </code>
+              </pre>
+          </section>
+          <section>
+            <p>
+              Using Markdown instead of HTML<span
+                style="color:gold; font-size: smaller;"
+                >*</span
+              >
+            </p>
+            <div class="l-double">
+              <div>
+                HTML
+                <pre>
+                  <code class="hljs html" data-trim>
+                    &lt;section&gt;
+                      &lt;h2&gt;This is my slide's title&lt;/h2&gt;
+                      &lt;p&gt;Here's some interesting content!&lt;/p&gt;
+                      &lt;ul&gt;
+                        &lt;li&gt;List item # 1&lt;/li&gt;
+                        &lt;li&gt;List item # 2&lt;/li&gt;
+                        &lt;li&gt;List item # 3&lt;/li&gt;
+                      &lt;/ul&gt;
+                    &lt;/section&gt;     
+                  </code>
+                </pre>
+              </div>
+              <div>
+                Markdown
+                <pre>
+                  <code class="hljs html" data-trim>
+                    &lt;section data-markdown&gt;
+                      &lt;textarea data-template&gt;
+                        ## This is my slide's title
+
+                        Here's some interesting content!
+
+                        - List item #1
+                        - List item #2
+                        - List item #3
+                      &lt;/textarea&gt;
+                    &lt;/section&gt;     
+                  </code>
+                </pre>
+              </div>
+            </div>
+            <p class="fragment fade-up">
+              <small
+                ><em
+                  ><span style="color:gold;">*</span> More on this later!</em
+                ></small
+              >
+            </p>
+          </section>
+        </section>
+        <!-- Speaker notes and other advanced features -->
+        <section>
+          <section data-background="#1B70A6">
+            <h2>Speaker notes and other advanced features</h2>
+          </section>
+          <section>
+            Speaker notes
+            <pre>
+              <code class="hljs html" data-line-numbers="6-9" data-trim>
+                &lt;div class="reveal"&gt;
+                  &lt;div class="slides"&gt;
+                    &lt;section&gt;
+                      &lt;h2&gt;My slide title&lt;/h2&gt;
+                      &lt;p&gt;Some great content&lt;/p&gt;
+                      &lt;aside class="notes"&gt;
+                        These are my speaker notes. They will appear in a
+                        new window when I press the 's' key.
+                      &lt;/aside&gt;
+                    &lt;/section&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code>
+            </pre>
+            <aside class="notes">
+              These are my speaker notes. They will appear in a new window when
+              I press the 's' key.
+            </aside>
+          </section>
+          <section
+            data-background-image="https://cdn.pixabay.com/photo/2019/11/06/14/33/moon-4606246_1280.jpg"
+          >
+            <p>Image backgrounds</p>
+            <small><em>External files</em></small>
+            <pre>
+              <code class="hljs html" data-line-numbers="3" data-trim>
+                &lt;div class="reveal"&gt;
+                  &lt;div class="slides"&gt;
+                    &lt;section data-background-image="https://cdn.pixabay.com/photo/2019/11/06/14/33/moon-4606246_1280.jpg"&gt;
+                      &lt;h2&gt;My slide title&lt;/h2&gt;
+                      &lt;p&gt;Some great content&lt;/p&gt;
+                    &lt;/section&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code>
+            </pre>
+            <p>
+              <small
+                >See
+                <a href="https://github.com/hakimel/reveal.js#image-backgrounds"
+                  >https://github.com/hakimel/reveal.js#image-backgrounds</a
+                >
+                for additional options</small
+              >
+            </p>
+          </section>
+          <section
+            data-background-image="https://media.giphy.com/media/5SMSlLBkJk2eA/giphy.gif"
+          >
+            <p>Gif backgrounds</p>
+            <small><em>External files</em></small>
+            <pre>
+              <code class="hljs html" data-line-numbers="3" data-trim>
+                &lt;div class="reveal"&gt;
+                  &lt;div class="slides"&gt;
+                    &lt;section data-background-image="https://media.giphy.com/media/5SMSlLBkJk2eA/giphy.gif"&gt;
+                      &lt;h2&gt;My slide title&lt;/h2&gt;
+                      &lt;p&gt;Some great content&lt;/p&gt;
+                    &lt;/section&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code>
+            </pre>
+            <p>
+              <small
+                >See
+                <a href="https://github.com/hakimel/reveal.js#image-backgrounds"
+                  >https://github.com/hakimel/reveal.js#image-backgrounds</a
+                >
+                for additional options</small
+              >
+            </p>
+          </section>
+          <section
+            data-background-video="https://player.vimeo.com/external/373218820.hd.mp4?s=4a1459beb71a1bc68e354c74dc51e26fb172cea1&profile_id=175"
+            data-background-video-muted="true"
+            data-background-video-loop="true"
+          >
+            <p>Video backgrounds</p>
+            <small><em>External files</em></small>
+            <pre>
+              <code class="hljs html" data-line-numbers="3-7" data-trim>
+                &lt;div class="reveal"&gt;
+                  &lt;div class="slides"&gt;
+                    &lt;section 
+                      data-background-video="https://player.vimeo.com/external/373218820.hd.mp4?s=4a1459beb71a1bc68e354c74dc51e26fb172cea1&profile_id=175"
+                      data-background-video-muted="true"
+                      data-background-video-loop="true"
+                    &gt;
+                      &lt;h2&gt;My slide title&lt;/h2&gt;
+                      &lt;p&gt;Some great content&lt;/p&gt;
+                    &lt;/section&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code>
+            </pre>
+            <p>
+              <small
+                >See
+                <a href="https://github.com/hakimel/reveal.js#video-backgrounds"
+                  >https://github.com/hakimel/reveal.js#video-backgrounds</a
+                >
+                for additional options</small
+              >
+            </p>
+          </section>
+          <section data-background-image="images/moon.jpg">
+            <p>Image/gif/video backgrounds</p>
+            <small><em>Local files</em></small>
+            <pre>
+              <code class="hljs html" data-line-numbers="3" data-trim>
+                &lt;div class="reveal"&gt;
+                  &lt;div class="slides"&gt;
+                    &lt;section data-background-image="images/moon.jpg"&gt;
+                      &lt;h2&gt;My slide title&lt;/h2&gt;
+                      &lt;p&gt;Some great content&lt;/p&gt;
+                    &lt;/section&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code>
+            </pre>
+            <small
+              >Create <code>images</code> folder at same level as
+              <code>index.html</code></small
+            >
+          </section>
+          <section>
+            <p>Iframe backgrounds</p>
+            <small><em>Embed external websites as a slide</em></small>
+            <pre>
+                <code class="hljs html" data-line-numbers="3-6" data-trim>
+                  &lt;div class="reveal"&gt;
+                    &lt;div class="slides"&gt;
+                      &lt;section 
+                        data-background-iframe="https://www.inquirer.com/"
+                        data-background-interactive
+                      &gt;
+                        &lt;h2&gt;My slide title&lt;/h2&gt;
+                        &lt;p&gt;Some great content&lt;/p&gt;
+                      &lt;/section&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                </code>
+              </pre>
+            <p>
+              <small
+                >See
+                <a
+                  href="https://github.com/hakimel/reveal.js#iframe-backgrounds"
+                  >https://github.com/hakimel/reveal.js#iframe-backgrounds</a
+                >
+                for additional options</small
+              >
+            </p>
+          </section>
+          <section
+            data-background-iframe="https://www.inquirer.com/"
+            data-background-interactive
+          >
+            <p>Iframe backgrounds</p>
+          </section>
+          <section data-transition="zoom" data-transition-speed="slow">
+            <p>Slide transitions</p>
+            <p>
+              <small>none/fade/slide/convex/concave/zoom</small>
+            </p>
+            <pre>
+              <code class="hljs html" data-line-numbers="3-6" data-trim>
+                &lt;div class="reveal"&gt;
+                  &lt;div class="slides"&gt;
+                    &lt;section 
+                      data-transition="zoom"
+                      data-transition-speed="slow"
+                    &gt;
+                      &lt;h2&gt;My slide title&lt;/h2&gt;
+                      &lt;p&gt;Some great content&lt;/p&gt;
+                    &lt;/section&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code>
+            </pre>
+          </section>
+          <section>
+            <p>Fragment transitions</p>
+            <pre>
+              <code class="hljs html" data-line-numbers="6-10" data-trim>
+                &lt;div class="reveal"&gt;
+                  &lt;div class="slides"&gt;
+                  &lt;section&gt;
+                    &lt;h2&gt;This is my slide's title&lt;/h2&gt;
+                    &lt;p&gt;Here's some interesting content!&lt;/p&gt;
+                    &lt;ul&gt;
+                      &lt;li class="fragment fade-in-then-semi-out"&gt;List item # 1&lt;/li&gt;
+                      &lt;li class="fragment fade-in-then-out"&gt;List item # 2&lt;/li&gt;
+                      &lt;li class="fragment fade-up"&gt;List item # 3&lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;/section&gt; 
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code>
+            </pre>
+          </section>
+          <section>
+            <div class="l-double">
+              <div>
+                <p class="fragment grow">grow</p>
+                <p class="fragment shrink">shrink</p>
+                <p class="fragment fade-out">fade-out</p>
+                <p class="fragment fade-up">
+                  fade-up (down, left, and right)
+                </p>
+                <p class="fragment fade-in-then-out">
+                  fade-in-then-out
+                </p>
+              </div>
+              <div>
+                <p class="fragment fade-in-then-semi-out">
+                  fade-in-then-semi-out
+                </p>
+                <p class="fragment highlight-current-blue">
+                  highlight-current-blue
+                </p>
+                <p class="fragment highlight-red">highlight-red</p>
+                <p class="fragment highlight-green">highlight-green</p>
+                <p class="fragment highlight-blue">highlight-blue</p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <p>Configuration</p>
+            <small>Go to line 39 in <code>index.html</code></small>
+            <pre>
+              <code class="hljs html" data-line-numbers="9-13" data-trim>
+                &lt;script&gt;
+                    Reveal.initialize({
+                      dependencies: [
+                        { src: 'plugin/markdown/marked.js' },
+                        { src: 'plugin/markdown/markdown.js' },
+                        { src: 'plugin/notes/notes.js', async: true },
+                        { src: 'plugin/highlight/highlight.js', async: true }
+                      ], 
+                      loop: true,
+                      autoSlide: 5000,
+                      progress: false,
+                      transitionSpeed: 'fast',
+                      backgroundTransition: 'zoom',
+                    });
+                &lt;/script&gt;
+              </code>
+            </pre>
+          </section>
+          <section>
+            <p>PDF export</p>
+            <small
+              >You <em>must</em> have a server running for this to work!<span
+                style="color:gold;"
+                >*</span
+              ></small
+            >
+            <ul>
+              <li>
+                Open your presentation with print-pdf included in the query
+                string (i.e., http://localhost:8000/?print-pdf).
+              </li>
+              <li>
+                If you want to include speaker notes in your export, you can
+                append showNotes=true to the query string (i.e.,
+                http://localhost:8000/?print-pdf&showNotes=true).
+              </li>
+            </ul>
+            <p class="fragment fade-up">
+              <small
+                ><em
+                  ><span style="color:gold;">*</span> More on this later!</em
+                ></small
+              >
+            </p>
+          </section>
+          <section>
+            <h3>External markdown</h3>
+            <div class="l-double">
+              <div>
+                Index.html
+                <pre>
+                  <code class="hljs html" data-line-numbers="3-9" data-trim>
+                    &lt;div class="reveal"&gt;
+                      &lt;div class="slides"&gt;
+                      &lt;section
+                        data-markdown="example.md"
+                        data-separator="^\n\n\n"
+                        data-separator-vertical="^\n\n"
+                        data-separator-notes="^Note:"
+                        data-charset="iso-8859-15"
+                      &gt;
+                      &lt;/section&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  </code>
+                </pre>
+              </div>
+              <div>
+                External .md file
+                <pre>
+                  <code class="hljs markdown" data-trim>
+                    ## First slide
+
+                    A paragraph with some text and a [link](http://www.library.upenn.edu).
+                    
+                    Note: Here are my speaker notes for this slide.
+                    
+                    
+                    ## A vertical slide nested within my first slide
+
+                    This is seperated by 2 spaces.
+
+
+
+                    ## Second Slide
+                
+                    My second "horizontal" slide is seperated by 3 spaces.
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <!-- Styling your slides -->
+        <section>
+          <section data-background="#1B70A6">
+            <h2>Styling your slides</h2>
+          </section>
+          <section>
+            <p>Changing the theme</p>
+            <small
+              >Replace <code>black.css</code> with your preferred
+              stylesheet</small
+            >
+            <pre>
+              <code class="hljs html" data-line-numbers="5" data-trim>
+                &lt;title&gt;reveal.js&lt;/title&gt;
+
+                &lt;link rel="stylesheet" href="css/reset.css"&gt;
+                &lt;link rel="stylesheet" href="css/reveal.css"&gt;
+                &lt;link rel="stylesheet" href="css/theme/black.css"&gt;
+
+                &lt;link rel="stylesheet" href="lib/css/monokai.css"&gt;
+                
+              </code>
+            </pre>
+          </section>
+          <section>
+            <p>Changing the theme</p>
+            <div class="l-double">
+              <div>
+                <p>
+                  <a
+                    href="#"
+                    onclick="document.getElementById('theme').setAttribute('href','../css/theme/black.css'); return false;"
+                    >Black (default)</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="#"
+                    onclick="document.getElementById('theme').setAttribute('href','../css/theme/white.css'); return false;"
+                    >White</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="#"
+                    onclick="document.getElementById('theme').setAttribute('href','../css/theme/league.css'); return false;"
+                    >League</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="#"
+                    onclick="document.getElementById('theme').setAttribute('href','../css/theme/sky.css'); return false;"
+                    >Sky</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="#"
+                    onclick="document.getElementById('theme').setAttribute('href','../css/theme/beige.css'); return false;"
+                    >Beige</a
+                  >
+                </p>
+              </div>
+              <div>
+                <p>
+                  <a
+                    href="#"
+                    onclick="document.getElementById('theme').setAttribute('href','../css/theme/simple.css'); return false;"
+                    >Simple</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="#"
+                    onclick="document.getElementById('theme').setAttribute('href','../css/theme/serif.css'); return false;"
+                    >Serif</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="#"
+                    onclick="document.getElementById('theme').setAttribute('href','../css/theme/blood.css'); return false;"
+                    >Blood</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="#"
+                    onclick="document.getElementById('theme').setAttribute('href','../css/theme/night.css'); return false;"
+                    >Night</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="#"
+                    onclick="document.getElementById('theme').setAttribute('href','../css/theme/moon.css'); return false;"
+                    >Moon</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="#"
+                    onclick="document.getElementById('theme').setAttribute('href','../css/theme/solarized.css'); return false;"
+                    >Solarized</a
+                  >
+                </p>
+              </div>
+            </div>
+          </section>
+          <section data-background="#FFB982">
+            <p
+              style="font-family: 'Times New Roman', Times, serif; color: white;"
+            >
+              Changing the theme for a single slide
+            </p>
+            <pre>
+              <code class="hljs html" data-line-numbers="3-4" data-trim>
+                &lt;div class="reveal"&gt;
+                  &lt;div class="slides"&gt;
+                  &lt;section data-background="#FFB982"&gt;
+                    &lt;h2 style="font-family: 'Times New Roman', Times, serif; color: white;"&gt;
+                      This is my slide's title
+                    &lt;/h2&gt;
+                    &lt;p&gt;Here's some interesting content!&lt;/p&gt;
+                  &lt;/section&gt; 
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code>
+            </pre>
+          </section>
+        </section>
+        <!-- Presenting in the wild -->
+        <section>
+          <section data-background="#1B70A6">
+            <h2>Presenting in the wild</h2>
+          </section>
+          <section>
+            <h2>Option 1</h2>
+            <p>
+              When presenting from your computer, open
+              <code>index.html</code> in your browser. That's it!
+            </p>
+          </section>
+          <section>
+            <h2>Option 2</h2>
+            <p>
+              If you want to host your slides on the web, you can easily upload
+              your files to GitHub, a popular code hosting site.
+            </p>
+          </section>
+          <section>
+            <h2>Serving slides on GitHub</h2>
+            <p>1. Create an account</p>
+            <img data-src="images/github_home.png" />
+          </section>
+          <section>
+            <h2>Serving slides on GitHub</h2>
+            <p>2. Create a new repository for your slides</p>
+            <p>
+              <small>Make sure to select a relevant name for your repo</small>
+            </p>
+            <p><img data-src="images/repo-create.png" /></p>
+          </section>
+          <section>
+            <h2>Serving slides on GitHub</h2>
+            <p>3. Make the repository public</p>
+            <p><small>Private repos cannot serve HTML pages!</small></p>
+            <p>
+              <img data-src="images/create-repository-public-private.png" />
+            </p>
+          </section>
+          <section>
+            <h2>Serving slides on GitHub</h2>
+            <p>4. Initialize the repository <em>without</em> a README</p>
+            <p><img data-src="images/create-repo-no-readme.png" /></p>
+          </section>
+          <section>
+            <h2>Serving slides on GitHub</h2>
+            <p>5. Open up your command line</p>
+            <div class="l-double">
+              <div>
+                <p>Mac</p>
+                <p><img data-src="images/terminal.png" /></p>
+                <p></p>
+              </div>
+
+              <div>
+                <p>Windows</p>
+                <p><img data-src="images/cmd.png" /></p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Serving slides on GitHub</h2>
+            <p>6. Check to see if you have git on your computer</p>
+            <pre>
+              <code class="hljs bash" data-trim>
+                git --version
+              </code>
+            </pre>
+            <small
+              >If you have git installed already, you'll see something like
+              <code>git version 2.17.1</code></small
+            >
+          </section>
+          <section>
+            <h2>Serving slides on GitHub</h2>
+            <p>6a. Download and install git on your machine</p>
+            <p>
+              <small
+                >Search for "download git [your os here]", open downloaded file,
+                and follow prompts (you can just select defaults)</small
+              >
+            </p>
+          </section>
+          <section>
+            <h2>Serving slides on GitHub</h2>
+            <p>7. Navigate to your Desktop and then the folder</p>
+            <pre>
+              <code class="hljs bash" data-trim>
+                cd Desktop
+                cd reveal.js-master
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Serving slides on GitHub</h2>
+            <p>
+              8. Create a new git repository and push your code
+            </p>
+            <p>
+              <small
+                ><span style="color: gold;">(via https, not ssh)</span></small
+              >
+            </p>
+            <pre>
+                <code class="hljs bash" data-trim>
+                  git init
+                  git add .
+                  git commit -m "Add all files"
+                  git remote add origin https://github.com/yourusername/yournewrepo.git
+                  git push -u origin master
+                </code>
+              </pre>
+            <p>
+              <small
+                ><span
+                  >Dialog will appear prompting you to input your GitHub
+                  username and password</span
+                ></small
+              >
+            </p>
+          </section>
+          <section>
+            <h2>Serving slides on GitHub</h2>
+            <p>
+              9. Turn on GitHub Pages for your repo
+            </p>
+            <p>
+              <small
+                >Navigate to <code>Settings</code>, scroll down
+                <code>GitHub Pages</code>, and change <code>Source</code> to
+                <code>master branch</code></small
+              >
+            </p>
+            <p>
+              <img data-src="images/github-pages.png" />
+            </p>
+          </section>
+          <section
+            data-background-image="https://media1.giphy.com/media/pa37AAGzKXoek/giphy.gif?cid=790b76114cf64d25c141062417456a0de4993fc80b4e0c49&rid=giphy.gif"
+          >
+            <p>
+              Voilà! Check out your public slides at the URL generated on the
+              <code>Settings</code> page
+            </p>
+            <hr />
+            <p>
+              <small>
+                If you encounter a 404, append
+                <code>/index.html</code> to the URL
+              </small>
+            </p>
+          </section>
+        </section>
+
+        <!-- Questions & exploration time -->
+        <section
+          data-background-image="https://media.giphy.com/media/CaiVJuZGvR8HK/giphy.gif"
+        >
+          <h3>Questions?</h3>
+          <p>
+            &#128214;
+          </p>
+          <p>
+            <code>
+              https://github.com/hakimel/reveal.js
+            </code>
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <script src="../js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: "../plugin/markdown/marked.js" },
+          { src: "../plugin/markdown/markdown.js" },
+          { src: "../plugin/notes/notes.js", async: true },
+          { src: "../plugin/highlight/highlight.js", async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>
