@@ -44,31 +44,31 @@
             <h2>What is Reveal.js?</h2>
           </section>
           <section>
-            A (free) framework developed by Hakim El Hattab for easily creating
-            beautiful presentations using HTML.
+            A JavaScript-based framework, developed by Hakim El Hattab, that
+            allows you to create dynamic presentations using HTML.
           </section>
           <section>
             Why use Reveal.js?
             <p class="fragment fade-in-then-semi-out">
-              Embed external websites in your slides
+              Embed external websites
             </p>
             <p class="fragment fade-in-then-semi-out">
-              Display videos, gifs, and images as backgrounds
+              Video, gif, and image backgrounds
             </p>
             <p class="fragment fade-in-then-semi-out">
-              Produce non-linear pathways through content
+              Non-linear pathways
             </p>
             <p class="fragment fade-in-then-semi-out">
-              Create custom styles and themes
+              Custom styles/themes
             </p>
             <p class="fragment fade-in-then-semi-out">
-              Export your presentation for easy hosting on the web
+              Host slides on the web
             </p>
             <p class="fragment fade-in-then-semi-out">
-              Interesting features like multiplexing
+              Interesting advanced features (e.g., multiplexing)
             </p>
             <p class="fragment fade-in-then-semi-out">
-              It's open source and extremely customizable
+              Extremely customizable
             </p>
           </section>
           <section>
@@ -108,7 +108,7 @@
             Folder structure
           </section>
           <section>
-            Basic slide authoring syntax
+            Making a slide
           </section>
           <section>
             Speaker notes and other advanced features
@@ -130,14 +130,14 @@
           </section>
           <section>
             <p>
-              Visual Studio Code
+              Visual Studio Code<small>&#11088;</small>
               <br />
               <small style="color: dodgerblue;"
                 >https://code.visualstudio.com</small
               >
             </p>
             <p>
-              Atom
+              Atom<small>&#11088;</small>
               <br />
               <small style="color: dodgerblue;">https://atom.io</small>
             </p>
@@ -231,7 +231,7 @@
         <!-- Basic slide authoring syntax -->
         <section>
           <section data-background="#1B70A6">
-            <h2>Basic slide authoring</h2>
+            <h2>Making a slide</h2>
           </section>
           <!-- HTML/CSS/JS intro -->
           <section
@@ -308,16 +308,37 @@
                 // Grab a reference to our button
                 const introButton = document.querySelector('#intro-button');
                 
-                // Change the text of our introduction
+                // Change the text and color of our intro text
                 function changeIntroText() {
                   const introText = document.querySelector('#intro-text');
                   introText.innerHTML = 'This is my new intro text!';
+                  introText.setAttribute("style", "color: gold;");
                 }
 
                 // When the intro button is clicked, execute the function above
                 introButton.addEventListener('click', changeIntroText);   
               </code>
             </pre>
+            <p><small id="intro-text">Click the button to change me!</small></p>
+            <button id="intro-button">Click Me</button>
+            <script>
+              let isClicked = false;
+              const introButton = document.querySelector("#intro-button");
+              function changeIntroText() {
+                const introText = document.querySelector("#intro-text");
+                if (!isClicked) {
+                  introText.innerHTML = "This is my new intro text!";
+                  introText.setAttribute("style", "color: gold;");
+                  introButton.innerHTML = "Change me back";
+                } else {
+                  introText.innerHTML = "Click the button to change me!";
+                  introText.removeAttribute("style");
+                  introButton.innerHTML = "Click Me";
+                }
+                isClicked = !isClicked;
+              }
+              introButton.addEventListener("click", changeIntroText);
+            </script>
           </section>
           <section>
             <p>For more web development help</p>
@@ -332,7 +353,7 @@
           </section>
           <!-- How to make basic slides  -->
           <section>
-            <p>Adding a "horizontal" slide</p>
+            <p>Adding a slide</p>
             <small>Start on <code>index.html</code>, line 26</small>
             <pre>
               <code class="hljs html" data-line-numbers="5" data-trim>
@@ -379,11 +400,11 @@
                       &lt;section&gt;
                         &lt;h2&gt;This is my slide's title&lt;/h2&gt;
                         &lt;p&gt;Here's some interesting content to captivate my audience!&lt;/p&gt;
-                        &lt;ul&gt;
+                        &lt;ol&gt;
                           &lt;li&gt;List item # 1&lt;/li&gt;
                           &lt;li&gt;List item # 2&lt;/li&gt;
                           &lt;li&gt;List item # 3&lt;/li&gt;
-                        &lt;/ul&gt;
+                        &lt;/ol&gt;
                       &lt;/section&gt;
                     &lt;/div&gt;
                   &lt;/div&gt;
@@ -405,11 +426,11 @@
                       &lt;section&gt;
                         &lt;h2&gt;This is my slide's title&lt;/h2&gt;
                         &lt;p&gt;Here's some interesting content to captivate my audience!&lt;/p&gt;
-                        &lt;ul&gt;
+                        &lt;ol&gt;
                           &lt;li&gt;List item # 1&lt;/li&gt;
                           &lt;li&gt;List item # 2&lt;/li&gt;
                           &lt;li&gt;List item # 3&lt;/li&gt;
-                        &lt;/ul&gt;
+                        &lt;/ol&gt;
                       &lt;/section&gt;
                       &lt;section&gt;
                         &lt;img data-src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"/&gt;
@@ -434,11 +455,11 @@
                     &lt;section&gt;
                       &lt;h2&gt;This is my slide's title&lt;/h2&gt;
                       &lt;p&gt;Here's some interesting content!&lt;/p&gt;
-                      &lt;ul&gt;
+                      &lt;ol&gt;
                         &lt;li&gt;List item # 1&lt;/li&gt;
                         &lt;li&gt;List item # 2&lt;/li&gt;
                         &lt;li&gt;List item # 3&lt;/li&gt;
-                      &lt;/ul&gt;
+                      &lt;/ol&gt;
                     &lt;/section&gt;     
                   </code>
                 </pre>
@@ -671,11 +692,11 @@
                   &lt;section&gt;
                     &lt;h2&gt;This is my slide's title&lt;/h2&gt;
                     &lt;p&gt;Here's some interesting content!&lt;/p&gt;
-                    &lt;ul&gt;
+                    &lt;ol&gt;
                       &lt;li class="fragment fade-in-then-semi-out"&gt;List item # 1&lt;/li&gt;
                       &lt;li class="fragment fade-in-then-out"&gt;List item # 2&lt;/li&gt;
                       &lt;li class="fragment fade-up"&gt;List item # 3&lt;/li&gt;
-                    &lt;/ul&gt;
+                    &lt;/ol&gt;
                   &lt;/section&gt; 
                   &lt;/div&gt;
                 &lt;/div&gt;
@@ -709,54 +730,24 @@
             </div>
           </section>
           <section>
-            <p>Configuration</p>
-            <small>Go to line 39 in <code>index.html</code></small>
-            <pre>
-              <code class="hljs html" data-line-numbers="9-13" data-trim>
-                &lt;script&gt;
-                    Reveal.initialize({
-                      dependencies: [
-                        { src: 'plugin/markdown/marked.js' },
-                        { src: 'plugin/markdown/markdown.js' },
-                        { src: 'plugin/notes/notes.js', async: true },
-                        { src: 'plugin/highlight/highlight.js', async: true }
-                      ], 
-                      loop: true,
-                      autoSlide: 5000,
-                      progress: false,
-                      transitionSpeed: 'fast',
-                      backgroundTransition: 'zoom',
-                    });
-                &lt;/script&gt;
-              </code>
-            </pre>
-          </section>
-          <section>
             <p>PDF export</p>
-            <small
-              >You <em>must</em> have a server running for this to work!<span
-                style="color:gold;"
-                >*</span
-              ></small
-            >
             <ul>
+              <li>Append <code>?print-pdf</code> to presentation URL</li>
+              <pre>
+                <code class="hljs html" data-trim>
+                    /Users/me/reveal.js-master/index.html?print-pdf
+                </code>
+              </pre>
               <li>
-                Open your presentation with print-pdf included in the query
-                string (i.e., http://localhost:8000/?print-pdf).
+                To include speaker notes, append
+                <code>&showNotes=true</code> to query above
               </li>
-              <li>
-                If you want to include speaker notes in your export, you can
-                append showNotes=true to the query string (i.e.,
-                http://localhost:8000/?print-pdf&showNotes=true).
-              </li>
+              <pre>
+                <code class="hljs html" data-trim>
+                    /Users/me/reveal.js-master/index.html?print-pdf&showNotes=true
+                </code>
+              </pre>
             </ul>
-            <p class="fragment fade-up">
-              <small
-                ><em
-                  ><span style="color:gold;">*</span> More on this later!</em
-                ></small
-              >
-            </p>
           </section>
           <section>
             <h3>External markdown</h3>
@@ -805,6 +796,158 @@
               </div>
             </div>
           </section>
+          <section>
+            <p>Configuration</p>
+            <small>Go to line 39 in <code>index.html</code></small>
+            <pre style="margin: 20px auto 0px auto;">
+                <code class="hljs html" data-line-numbers="9-13" data-trim>
+                  &lt;script&gt;
+                      Reveal.initialize({
+                        dependencies: [
+                          { src: 'plugin/markdown/marked.js' },
+                          { src: 'plugin/markdown/markdown.js' },
+                          { src: 'plugin/notes/notes.js', async: true },
+                          { src: 'plugin/highlight/highlight.js', async: true }
+                        ], 
+                        loop: true,
+                        autoSlide: 5000,
+                        progress: false,
+                        transitionSpeed: 'fast',
+                        backgroundTransition: 'zoom',
+                      });
+                  &lt;/script&gt;
+                </code>
+              </pre>
+            <small
+              ><a href="sample-loop.html" target="_blank" rel="noreferrer"
+                >Example of looping slides</a
+              ></small
+            >
+          </section>
+          <section>
+            <p>Plugins</p>
+
+            <small
+              >Extend Reveal's functionality by adding packages to the
+              <code>plugins</code> folder</small
+            >
+            <ul style="font-size: 24px;">
+              <li>
+                <a
+                  href="https://github.com/rajgoel/reveal.js-plugins/tree/master/anything"
+                  target="_blank"
+                  rel="noreferrer"
+                  >anything</a
+                >: a plugin for adding plots, charts, animated SVGs, or anything
+                else inside an HTML object using a JSON string and a javascript
+                function (<a
+                  href="https://rajgoel.github.io/reveal.js-demos/anything-demo.html"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Demo</a
+                >)
+              </li>
+              <li>
+                <a
+                  href="https://github.com/rajgoel/reveal.js-plugins/tree/master/audio-slideshow"
+                  target="_blank"
+                  rel="noreferrer"
+                  >audio-slideshow</a
+                >: a plugin for easy audio playback and recording (<a
+                  href="https://rajgoel.github.io/reveal.js-demos/audio-slideshow-demo.html"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Demo</a
+                >)
+              </li>
+              <li>
+                <a
+                  href="https://github.com/rajgoel/reveal.js-plugins/tree/master/broadcast"
+                  target="_blank"
+                  rel="noreferrer"
+                  >broadcast</a
+                >: A plugin for audio and video broadcast for slide
+                presentations (<a
+                  href="https://rajgoel.github.io/reveal.js-demos/broadcast-demo.html"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Demo</a
+                >)
+              </li>
+              <li>
+                <a
+                  href="https://github.com/rajgoel/reveal.js-plugins/tree/master/chalkboard"
+                  target="_blank"
+                  rel="noreferrer"
+                  >chalkboard</a
+                >: A plugin adding a chalkboard and slide annotation (<a
+                  href="https://rajgoel.github.io/reveal.js-demos/chalkboard-demo.html"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Demo</a
+                >)
+              </li>
+              <li>
+                <a
+                  href="https://github.com/rajgoel/reveal.js-plugins/tree/master/chart"
+                  target="_blank"
+                  rel="noreferrer"
+                  >chart</a
+                >: a plugin for easy integration of charts (<a
+                  href="https://rajgoel.github.io/reveal.js-demos/chart-demo.html"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Demo</a
+                >)
+              </li>
+              <li>
+                <a
+                  href="https://github.com/rajgoel/reveal.js-plugins/tree/master/customcontrols"
+                  target="_blank"
+                  rel="noreferrer"
+                  >customcontrols</a
+                >: a plugin for customization of controls (<a
+                  href="https://rajgoel.github.io/reveal.js-demos/customcontrols-demo.html"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Demo</a
+                >)
+              </li>
+              <li>
+                <a
+                  href="https://github.com/rajgoel/reveal.js-plugins/tree/master/mathsvg"
+                  target="_blank"
+                  rel="noreferrer"
+                  >mathsvg</a
+                >: An extension of the math.js plugin allowing to render LaTeX
+                expressions in SVG.
+              </li>
+              <li>
+                <a
+                  href="https://github.com/rajgoel/reveal.js-plugins/tree/master/spreadsheet"
+                  target="_blank"
+                  rel="noreferrer"
+                  >spreadsheet</a
+                >
+                : A plugin for adding Excel-like spreadsheets with formulas (<a
+                  href="https://rajgoel.github.io/reveal.js-demos/spreadsheet-demo.html"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Demo</a
+                >)
+              </li>
+              <li>
+                <em
+                  >...<a
+                    href="https://github.com/hakimel/reveal.js/wiki/Plugins,-Tools-and-Hardware"
+                    target="_blank"
+                    rel="noreferrer"
+                    >plus many more!</a
+                  ></em
+                >
+              </li>
+            </ul>
+          </section>
         </section>
 
         <!-- Styling your slides -->
@@ -815,8 +958,8 @@
           <section>
             <p>Changing the theme</p>
             <small
-              >Replace <code>black.css</code> with your preferred
-              stylesheet</small
+              >Replace <code>black.css</code> with your preferred stylesheet
+              available in <code>css/theme</code></small
             >
             <pre>
               <code class="hljs html" data-line-numbers="5" data-trim>
@@ -1099,13 +1242,16 @@
           data-background-image="https://media.giphy.com/media/CaiVJuZGvR8HK/giphy.gif"
         >
           <h3>Questions?</h3>
+          <p>Kenny Whitebloom | kenwhi@upenn.edu</p>
           <p>
             &#128214;
           </p>
           <p>
-            <code>
-              https://github.com/hakimel/reveal.js
-            </code>
+            <small
+              ><code>
+                https://github.com/hakimel/reveal.js
+              </code></small
+            >
           </p>
         </section>
       </div>
