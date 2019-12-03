@@ -128,7 +128,7 @@
           <section>
             Download a code editor
           </section>
-          <section>
+          <section data-state="code-editor-selection">
             <p>
               Visual Studio Code<small>&#11088;</small>
               <br />
@@ -162,6 +162,10 @@
                 >https://www.barebones.com/products/bbedit/</small
               >
             </p>
+            <!-- Play button for music -->
+            <div style="display: flex; justify-content: center;">
+              <div class="play-music-light"></div>
+            </div>
           </section>
           <section>
             Download the reveal.js files
@@ -1104,6 +1108,10 @@
           <section>
             <h2>Serving slides on GitHub</h2>
             <p>1. Create an account</p>
+            <!-- Play button for music -->
+            <div style="display: flex; justify-content: center;">
+              <div class="play-music-light"></div>
+            </div>
             <img data-src="images/github_home.png" />
           </section>
           <section>
@@ -1165,6 +1173,10 @@
                 and follow prompts (you can just select defaults)</small
               >
             </p>
+            <!-- Play button for music -->
+            <div style="display: flex; justify-content: center;">
+              <div class="play-music-light"></div>
+            </div>
           </section>
           <section>
             <h2>Serving slides on GitHub</h2>
@@ -1271,6 +1283,24 @@
           { src: "../plugin/highlight/highlight.js", async: true }
         ]
       });
+
+      const file = new Audio("./audio/CA_Ramblers_Animal_Crackers_64kb.mp3");
+      const audioEls = document.querySelectorAll(".play-music-light");
+      for (let i = 0; i < audioEls.length; i++) {
+        audioEls[i].addEventListener("click", () => toggleAudio(audioEls[i]));
+      }
+
+      function toggleAudio(audioEl) {
+        const attr = audioEl.getAttribute("class");
+        const regex = /play-music/g;
+        if (regex.test(attr)) {
+          audioEl.setAttribute("class", "pause-music-light");
+          file.play();
+        } else {
+          audioEl.setAttribute("class", "play-music-light");
+          file.pause();
+        }
+      }
     </script>
   </body>
 </html>
