@@ -208,23 +208,25 @@
             <h4>The reveal.js folder overview</h4>
             <ul>
               <li class="fragment fade-in-then-semi-out">
-                <strong>index.html</strong>: Main file that you'll edit to add
-                slides
+                <strong style="text-decoration: underline; color: gold"
+                  >index.html</strong
+                >: Main file that you'll edit to add slides
               </li>
               <li class="fragment fade-in-then-semi-out">
-                <strong>css</strong>: Core styles without which the project does
-                not function (also contains other default themes)
+                <strong style="text-decoration: underline;">/css</strong>: Core
+                styles without which reveal.js does not function
               </li>
               <li class="fragment fade-in-then-semi-out">
-                <strong>js</strong>: Like CSS but for JavaScript
+                <strong style="text-decoration: underline;">/css/theme</strong>:
+                Location of various default themes
               </li>
               <li class="fragment fade-in-then-semi-out">
-                <strong>plugin</strong>: Components that have been developed as
-                extensions to reveal.js
+                <strong style="text-decoration: underline;">/js</strong>: Like
+                CSS but for JavaScript
               </li>
               <li class="fragment fade-in-then-semi-out">
-                <strong>lib</strong>: All other third party assets (JavaScript,
-                CSS, fonts)
+                <strong style="text-decoration: underline;">/plugin</strong>:
+                Components that have been developed as extensions to reveal.js
               </li>
             </ul>
             <p class="fragment fade-up">
@@ -242,7 +244,7 @@
             data-background-image="https://media1.giphy.com/media/kwCJA4NGu2PtMzpxGb/giphy.gif?cid=790b761186bfb5605b097bc3eb34935a0bf502d20f30e51c&rid=giphy.gif"
           >
             <p>
-              ...but first! A superduper attenuated HTML/CSS/JS intro
+              ...but first! A super-duper abbreviated HTML/CSS/JS intro
             </p>
           </section>
           <section>
@@ -1239,13 +1241,29 @@
               Voilà! Check out your public slides at the URL generated on the
               <code>Settings</code> page
             </p>
-            <hr />
+            <hr style="width: 50%;" />
             <p>
               <small>
                 If you encounter a 404, append
                 <code>/index.html</code> to the URL
               </small>
             </p>
+          </section>
+          <section>
+            <h2>Serving slides on GitHub</h2>
+            <p>
+              10. Follow similar steps to update your published slides
+            </p>
+            <p>
+              <small>Make and save changes to your slides</small>
+            </p>
+            <pre>
+                <code class="hljs bash" data-trim>
+                  git add .
+                  git commit -m "A short description of the changes I made"
+                  git push
+                </code>
+              </pre>
           </section>
         </section>
 
