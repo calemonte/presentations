@@ -1209,14 +1209,26 @@
                   git push -u origin master
                 </code>
               </pre>
+            <small>
+              <em
+                >If you see an error at the <code>git commit</code> portion,
+                simply enter the two commands as directed, replacing your email
+                and name where indicated</em
+              >
+            </small>
+            <hr style="width: 15%;" />
             <p>
               <small
                 ><span
-                  >Dialog will appear prompting you to input your GitHub
-                  username and password</span
+                  >At the <code>git push</code> part, a pop-up will appear
+                  prompting you to input your GitHub username and password</span
                 ></small
               >
             </p>
+            <aside class="notes">
+              <p>git config --global user.email "you@example.com"</p>
+              <p>git config --global user.name "Your Name"</p>
+            </aside>
           </section>
           <section>
             <h2>Serving slides on GitHub</h2>
@@ -1227,7 +1239,8 @@
               <small
                 >Navigate to <code>Settings</code>, scroll down
                 <code>GitHub Pages</code>, and change <code>Source</code> to
-                <code>master branch</code></small
+                <code>master branch</code>. The link to your slides will appear
+                right above where you did that.</small
               >
             </p>
             <p>
@@ -1237,17 +1250,26 @@
           <section
             data-background-image="https://media1.giphy.com/media/pa37AAGzKXoek/giphy.gif?cid=790b76114cf64d25c141062417456a0de4993fc80b4e0c49&rid=giphy.gif"
           >
-            <p>
-              Voilà! Check out your public slides at the URL generated on the
-              <code>Settings</code> page
-            </p>
-            <hr style="width: 50%;" />
-            <p>
-              <small>
-                If you encounter a 404, append
-                <code>/index.html</code> to the URL
-              </small>
-            </p>
+            <div
+              style="background: black; border-radius: 10px; padding: 5px;;"
+            >
+              <p>
+                Voilà! Your slides are now live on the web!
+              </p>
+              <hr style="width: 30%;" />
+              <p>
+                <small>
+                  If you encounter a 404/Page Not Found error, append
+                  <code>/index.html</code> to the end of URL your slides (e.g.,
+                  <code
+                    >myusername.github.io/myreponame/<span
+                      style="color: greenyellow"
+                      >index.html</span
+                    ></code
+                  >)
+                </small>
+              </p>
+            </div>
           </section>
           <section>
             <h2>Serving slides on GitHub</h2>
