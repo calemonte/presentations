@@ -9,12 +9,12 @@
 
     <title>reveal.js</title>
 
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/reveal.css" />
-    <link rel="stylesheet" href="../css/theme/black.css" />
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/reveal.css" />
+    <link rel="stylesheet" href="../../css/theme/black.css" />
 
     <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="../lib/css/monokai.css" />
+    <link rel="stylesheet" href="../../lib/css/monokai.css" />
 
     <!-- Printing and PDF exports -->
     <script>
@@ -22,20 +22,21 @@
       link.rel = "stylesheet";
       link.type = "text/css";
       link.href = window.location.search.match(/print-pdf/gi)
-        ? "../css/print/pdf.css"
-        : "../css/print/paper.css";
+        ? "../../css/print/pdf.css"
+        : "../../css/print/paper.css";
       document.getElementsByTagName("head")[0].appendChild(link);
     </script>
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
+        <!-- Copy this template into a new folder within /slides -->
         <section>Slide 1</section>
         <section>Slide 2</section>
       </div>
     </div>
 
-    <script src="../js/reveal.js"></script>
+    <script src="../../js/reveal.js"></script>
 
     <script>
       // More info about config & dependencies:
@@ -43,10 +44,10 @@
       // - https://github.com/hakimel/reveal.js#dependencies
       Reveal.initialize({
         dependencies: [
-          { src: "../plugin/markdown/marked.js" },
-          { src: "../plugin/markdown/markdown.js" },
-          { src: "../plugin/notes/notes.js", async: true },
-          { src: "../plugin/highlight/highlight.js", async: true }
+          { src: "../../plugin/markdown/marked.js" },
+          { src: "../../plugin/markdown/markdown.js" },
+          { src: "../../plugin/notes/notes.js", async: true },
+          { src: "../../plugin/highlight/highlight.js", async: true }
         ]
       });
     </script>

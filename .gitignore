@@ -10,5 +10,6 @@ tmp/**
 node_modules/
 .sass-cache
 ds-librarian-talk
+sc-demo
 css/reveal.min.css
 js/reveal.min.js
