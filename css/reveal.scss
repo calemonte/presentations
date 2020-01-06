@@ -1287,7 +1287,7 @@ $controlsArrowAngleActive: 36deg;
 	}
 	.slides section:hover,
 	.slides section.present {
-		outline: 10px solid rgba(150,150,150,0.4);
+		outline: 10px solid rgba(252, 218, 26, 1);
 		outline-offset: 10px;
 	}
 	.slides section .fragment {
@@ -1765,4 +1765,43 @@ $notesWidthPercent: 25%;
 
 .zoomed .reveal .roll span:after {
 	visibility: hidden;
+}
+
+/*********************************************
+ * CUSTOM STYLES FROM MEEEEEEEEE
+ *********************************************/
+
+ .l-double {
+  display: grid;
+  grid-template-columns: 50% 50%; 
+}
+
+.play-music-light {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-left: 12px solid rgb(255, 255, 255);
+  border-bottom: 8px solid transparent;
+}
+
+.pause-music-light {
+  width: 4px;
+  height: 16px;
+  border-right: 4px solid rgb(255, 255, 255);
+  border-left: 4px solid rgb(255, 255, 255);
+}
+
+.play-music-dark {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-left: 12px solid rgb(0, 0, 0);
+  border-bottom: 8px solid transparent;
+}
+
+.pause-music-dark {
+  width: 4px;
+  height: 16px;
+  border-right: 4px solid rgb(0, 0, 0);
+  border-left: 4px solid rgb(0, 0, 0);
 }
