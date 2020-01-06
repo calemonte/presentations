@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>January 2020 Annenberg Library Digital Scholarship Talk</title>
+
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/reveal.css" />
+    <link rel="stylesheet" href="../../css/theme/black.css" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../../lib/css/monokai.css" />
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "../../css/print/pdf.css"
+        : "../../css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Title slide -->
+        <section>
+          <h2>Digital Scholarship in 2020</h2>
+          <hr />
+          <p>Kenny Whitebloom</p>
+          <p><em>Digital Scholarly Publishing Librarian</em></p>
+        </section>
+        <!-- Talk overview vertical slide -->
+        <section>
+          <section
+            data-transition="slide"
+            data-background="#F27405"
+            data-background-transition="zoom"
+          >
+            <h2>Overview</h2>
+          </section>
+          <section>
+            What is Digital Scholarship (DS)?
+          </section>
+          <section>
+            What are common methods in DS right now?
+          </section>
+          <section>
+            In what ways are these methods delivered?
+          </section>
+          <section>
+            How do DS units tend to be organized?
+          </section>
+          <section>
+            What challenges face DS?
+          </section>
+          <section>
+            Regardless of local size and shape, what are some common features?
+          </section>
+          <section>
+            Based on all of that, where might DS be headed in the future?
+          </section>
+          <section
+            data-background-image="https://i.giphy.com/media/CjmvTCZf2U3p09Cn0h/giphy.webp"
+          ></section>
+        </section>
+
+        <!-- What is DS definition overview -->
+        <section>
+          <section
+            data-transition="slide"
+            data-background="#03588C"
+            data-background-transition="zoom"
+          >
+            <h2>What is Digital Scholarship?</h2>
+          </section>
+          <section>
+            <q>
+              use of digital evidence and method, digital authoring, digital
+              publishing, digital curation and preservation, and digital use and
+              reuse of scholarship.</q
+            >
+            <p>- Abby Smith Rumsey (2011)</p>
+            <aside class="notes">
+              The ARL endorsed definition is relatively dry. It's true, but I
+              find the "digital use and reuse of scholarsip" unsatisfying.
+            </aside>
+          </section>
+          <section
+            data-background-image="https://i.giphy.com/media/xTiTnumdcQABBLgM92/giphy.webp"
+          >
+            <p style="color:white; background: black;">
+              A not-quite-pin-downable collection of skills, methods, and
+              approaches for answering scholarly questions using digital
+              technology, often involving community building.
+            </p>
+            <aside class="notes">
+              <ul>
+                <li>
+                  I like this defintion that I made up better. It gets at the
+                  fluidity of this field and it's relatively amorphous
+                  qualities.
+                </li>
+                <li>
+                  Micah Vandegrift said that "Generally digital scholarship
+                  resists attempts to be corralled into any one field, thereby
+                  serving as a bridge across disciplinary divides. It's hard to
+                  pin down and has so many different permutations across
+                  organizations." That's true, and you see it in the variety of
+                  services, specialities, and focuses for different groups.
+                </li>
+                <li>
+                  I also like this definition because it reveals a bit about the
+                  human element of all of this -- that it's about collaboration,
+                  about building a community of researchers and practioners, and
+                  how we often share the outputs of our work very broadly and
+                  publicly.
+                </li>
+              </ul>
+            </aside>
+          </section>
+        </section>
+
+        <!-- What are the methods that we most commonly see? -->
+        <section>
+          <section
+            data-transition="slide"
+            data-background="#04BF55"
+            data-background-transition="zoom"
+          >
+            <h3>What are the most common methods in DS right now?</h3>
+            <aside class="notes">
+              The methods that we commonly see under the umbrella of digital
+              scholarship include some of the following (and I'm going to
+              provide some examples because those make things more interesting).
+              It should be obvious that not every DS unit is going to specialize
+              in every single one of these. Universities should focus on the
+              areas of strength and where their abilities are greatest.
+            </aside>
+          </section>
+          <section>
+            Mapping & GIS
+            <aside class="notes">
+              Geographic information systems (GIS) is the combination of tabular
+              data (e.g. a spreadsheet) with geographic boundaries (e.g.
+              maps).There are all kinds of examples, but a couple that I want to
+              highlight.
+            </aside>
+          </section>
+          <section
+            data-background-iframe="https://dsl.richmond.edu/panorama/"
+            data-background-interactive
+          >
+            <aside class="notes">
+              American Panorama -- a project of the Digital Scholarship Lab at
+              the University of Richmond -- is an historical atlas of the United
+              States for the twenty-first century. It combines cutting-edge
+              research with innovative interactive mapping techniques, designed
+              to appeal to anyone with an interest in American history or a love
+              of maps.
+            </aside>
+          </section>
+          <section
+            data-background-video="https://videos.files.wordpress.com/aNswA424/paul-img_5546-2_dvd.mp4"
+            data-background-video-loop="true"
+            style="color: black;"
+          >
+            Penn Libraries Map Room
+            <aside class="notes">
+              Mapping and GIS is also manifested in participatory experiences
+              that involve people in the creation of scholarship and
+              understanding.
+            </aside>
+          </section>
+          <section>
+            Data Curation & Database Design
+            <aside class="notes">
+              <ul>
+                <li>
+                  Data curation is the organization and integration of data
+                  collected from various sources. This work involves annotation,
+                  publication and presentation of the data such that the value
+                  of the data is maintained over time, and the data remains
+                  available for reuse and preservation. In other words, digital
+                  curation is stewardship that provides for the reproducibility
+                  and re-use of authentic digital data and other digital assets.
+                </li>
+                <li>
+                  Again, I'm turning towards another Penn Libraries DS project,
+                  Data Refuge, which exemplifies this part of data stewardship
+                  and reproducibility.
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section
+            data-background-iframe="https://www.datarefuge.org/dataset"
+            data-background-interactive
+          ></section>
+          <section>
+            Visualization
+            <aside class="notes">
+              How can we understand data? How can it be visualized in ways that
+              are compelling and revelatory in some way?
+            </aside>
+          </section>
+          <section
+            data-background-image="https://i0.wp.com/geoffboeing.com/wp-content/uploads/2019/09/city-street-network-polar-histograms-alpha.jpg?ssl=1"
+          >
+            <aside class="notes">
+              Here's an interesting one that demonstrates the type of works this
+              entails. It's Geoff Boeing's visualization of the street network
+              orientation. It allows you to appreciate something in a new and
+              interesting way.
+            </aside>
+          </section>
+          <section>
+            Network, Statistical, and Textual Analysis
+            <aside class="notes">
+              These are compuational approaches to quantifying and exploring
+              relationships between entities, such as people, places or things,
+              or textual elements in a novel. Very often displayed in some sort
+              of visualization or graphical interface.
+            </aside>
+          </section>
+          <section
+            data-background-iframe="http://networks.viraltexts.org/1836to1860/#"
+            data-background-interactive
+          >
+            <aside class="notes">
+              Network of "Viral Text" Sharing, 1836-1860 This graph illustrates
+              connections among pre-Civil-War newspapers from the Library of
+              Congress' Chronicling America newspaper archive and Making of
+              America magazine archive. The circles (nodes) in the graph
+              represent individual newspapers or magazines, while the lines
+              between them (edges) represent shared texts discovered by
+              researchers working on the Viral Texts project, sponsored by
+              Northeastern University's NULab for Texts, Maps, and Networks.
+            </aside>
+          </section>
+          <section>
+            <p>(Multimodal) Digital Publishing</p>
+            <p class="fragment fade-in-then-semi-out">Open Access Journals</p>
+            <p class="fragment fade-in-then-semi-out">Monographs</p>
+            <p class="fragment fade-in-then-semi-out">
+              Open Educational Resources
+            </p>
+            <p class="fragment fade-in-then-semi-out">Digital Exhibits</p>
+          </section>
+          <section>
+            <a
+              href="https://orbit.openlibhums.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+                src="images/janeway.png"
+                alt="Janeway logo"
+                style="background: white;"
+            /></a>
+          </section>
+          <section>
+            <a
+              href="https://temple.manifoldapp.org/projects/project-collection/north-broad-press"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+                src="images/north-broad-press.png"
+                alt="Screenshot of North Broad Press homepage"
+            /></a>
+          </section>
+          <section
+            data-background-iframe="https://elotroalex.github.io/ed/"
+            data-background-interactive
+          ></section>
+          <section
+            data-background-iframe="http://digitalpaxton.org/works/digital-paxton/index"
+            data-background-interactive
+          ></section>
+          <section
+            data-background-iframe="https://pennds.org/societyhill/"
+            data-background-interactive
+          ></section>
+          <section>
+            Web development, interface design, UI/UX
+          </section>
+          <section
+            data-background-iframe="http://vr.ashberyhouse.yale.edu"
+            data-background-interactive
+          >
+            <aside class="notes">
+              John Ashbery’s Nest is a website and virtual tour of the American
+              poet’s home. Makes use of virtual reality technologies to explore
+              rooms and interact with objects inside the house, Nest enables
+              users to experience the intimacy of being in “the middle of
+              things,” a reality that echoes in Ashbery’s greatest poems. This
+              was produced by the DHLab at Yale, which isn't technically part of
+              Yale DS (at least I don't believe), but with so many of DS'
+              methods, the intersectons and dotted-lines are sometimes areas of
+              strength and are often overlapping with the work of Digital
+              Scholarship in significant ways.
+            </aside>
+          </section>
+        </section>
+
+        <!-- What are the points of intersection? -->
+        <section data-background="#4d7aff">
+          <h3>Points of Intersection</h3>
+          <p class="fragment fade-in-then-semi-out">
+            Digital Humanities
+          </p>
+          <p class="fragment fade-in-then-semi-out">
+            Scholarly Communications
+          </p>
+          <p class="fragment fade-in-then-semi-out">
+            Makerspaces, 3D Modeling and Printing
+          </p>
+          <p class="fragment fade-in-then-semi-out">
+            Digital Preservation
+          </p>
+          <p class="fragment fade-in-then-semi-out">
+            Digitization
+          </p>
+          <p class="fragment fade-in-then-semi-out">
+            Repository Services
+          </p>
+          <p class="fragment fade-in-then-semi-out">
+            Teaching and Learning Services
+          </p>
+          <p class="fragment fade-in-then-semi-out">Accessibility Services</p>
+        </section>
+
+        <!-- How are these methods instantiated in services? -->
+        <section>
+          <section
+            data-transition="slide"
+            data-background="#ff794d"
+            data-background-transition="zoom"
+          >
+            <h3>
+              How are these methods delivered?
+            </h3>
+          </section>
+          <section>
+            Project-based collaborations and partnerships with faculty, centers,
+            student groups, and others
+            <aside class="notes">
+              <ul>
+                <li>
+                  Much of this work is built around producing some sort of
+                  output – an interactive map, a digital monograph, and publicly
+                  accessible database of information.
+                </li>
+                <li>
+                  It’s also work that deeply integrates the library employee in
+                  the research process. It means working side by side the
+                  researcher to create something new or interesting.
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            Consultations (one-off and ongoing)
+            <aside class="notes">
+              Consultations are relationship building enterprises and really the
+              bread and butter of DS services. Consultations on the topics that
+              we listed above, but also on the sort of meta-practices that
+              sometimes get glossed over: Project management support, training,
+              and involvement. Workflow creation and providing support in really
+              thinking through the actual work of a project, sharing redflags
+              and experiences from other areas. Much of this work relates to
+              setting expectations and molding something into an achievable end
+              product.
+            </aside>
+          </section>
+          <section>
+            Workshops, trainings, and events for a wide variety of audiences
+            <aside class="notes">
+              Community building, bringing together different areas of the
+              university
+            </aside>
+          </section>
+          <section>
+            Facilities and hardware/software provision
+            <aside class="notes">
+              This one's obvious, but not all DS units have facilities. Server
+              space, deployable technologies like Omeka, Scalar,
+              WordPress/Drupal are common.
+            </aside>
+          </section>
+          <section>
+            In-course instruction and partnerships in pedagogy
+          </section>
+          <section
+            data-transition="slide"
+            data-background="#4d7e65"
+            data-background-transition="zoom"
+          >
+            Tiered/pyramid model is common organizing principle for services
+            <aside class="notes">
+              Generally speaking, you see many DS units approaching the delivery
+              of their services by having tiers or levels.
+              <ul>
+                <li>
+                  At the top is the highly-collaborative, longer term projects.
+                </li>
+                <li>
+                  In the middle is the bread and butter type of stuff
+                  (consultations, workshops, email correspondence).
+                </li>
+                <li>
+                  And the bottom is the systematized stuff (for instance, the IR
+                  collections or an out of the box Omeka site).
+                </li>
+              </ul>
+            </aside>
+          </section>
+        </section>
+
+        <!-- How is DS administratively organized? -->
+        <!-- Make sure to include table with range of staff members () -->
+        <section>
+          <section
+            data-transition="slide"
+            data-background="#794dff"
+            data-background-transition="zoom"
+          >
+            <h3>How is DS administratively organinized?</h3>
+          </section>
+          <section
+            data-background-image="images/cmu.png"
+            style="background: black; color: white;"
+          >
+            Distributed collection of research practices and services
+            <aside class="notes">
+              <ul>
+                <li>
+                  Amorphous collection of practices that doesn’t necessarily
+                  have a physical instantiation (a webpage that collects
+                  disparate activities). More like a cross
+                  departmental/functional unit that offers services from various
+                  people in the library system.
+                </li>
+                <li>
+                  dSHARP from Carnegie Mellon University is self-described as “a
+                  collection of research practices using web-facing tools and
+                  methods that generate research products with online
+                  interaction or consumption as required modes of use.” They
+                  don’t do any of the web development or technical support that
+                  some of other projects might provide, but they consult and
+                  provide a locus for that type of work.
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section
+            data-background-image="images/vanpelt.jpg"
+            style="background: black; color: white;"
+          >
+            Centers/departments without a footprint
+            <aside class="notes">
+              Centers that don’t have facilities but are nonetheless more
+              administratively organized than those cross-functional units. I’d
+              say that’s what we have had up till this point.
+            </aside>
+          </section>
+          <section
+            data-background-image="images/emory.jpg"
+            style="background: black; color: white;"
+          >
+            Centers/departments with a footprint
+            <aside class="notes">
+              Physical centers with facilities for consultations, meetings, and
+              other sorts of interpersonal connection:
+              <ul>
+                <li>
+                  Emory Digital Scholarship Center (huge)
+                </li>
+                <li>
+                  University of Alberta Digital Scholarship Centre (launched
+                  this past summer and not as crazy, but still nice) -
+                  https://dsc.library.ualberta.ca/
+                </li>
+                <li>
+                  Doesn't need to be this elaborate though! Columbia’s Studio at
+                  Butler is a single room that started off pretty modestly. The
+                  point is that there's a space that's recognizable in which you
+                  can base programming around, host events, and normalize the
+                  presence of DS.
+                </li>
+              </ul>
+            </aside>
+          </section>
+
+          <section
+            data-background-video="http://dslab.msu.domains/dslab-test1/wp-content/uploads/2019/08/Welcome-to-the-Digital-Scholarship-Lab-at-MSU.mp4?_=1"
+            data-background-video-muted="true"
+            style="background: black; color: white;"
+          >
+            Labs
+            <aside class="notes">
+              <ul>
+                <li>
+                  Labs are like hybrid blends of these more traditional seeming
+                  centers with state-of-the-art technologies. It's like a hybrid
+                  of what we have in WIC with much more. The video looping in
+                  the background is from the new(ish) Digital Scholarship Lab at
+                  Michigan State. It's crazy.
+                </li>
+              </ul>
+              More focused around a specific set of research topics (text
+              analysis or data mining).
+            </aside>
+          </section>
+        </section>
+
+        <!-- Challenges facing DS right now -->
+        <section>
+          <section
+            data-transition="slide"
+            data-background="#ff4d7a"
+            data-background-transition="zoom"
+          >
+            <h3>What are the challenges facing DS?</h3>
+          </section>
+          <section>
+            Keeping things focused while also capacious
+            <aside class="notes">
+              There is a way array of methods and approaches in DS. I spent a
+              lot of time going through all of the different local permutations
+              of methods and appraoches that DS _can_ be, and despite that it
+              can still be a lot to wrap your head around.How do you focus on a
+              coherent set of services / areas of focus while also remaining
+              flexible and open to new techniques?
+            </aside>
+          </section>
+          <section>
+            Supporting wide range of disciplinary needs
+            <aside class="notes">
+              The various methods intersect with every discipline, but sometimes
+              it's a challenge to meet the unique needs of every discipline.
+              This isn't not a new challenge to librarianship, but it's
+              something that affects DS right now.
+            </aside>
+          </section>
+          <section>
+            Limited time and resources to spend on custom projects
+            <aside class="notes">
+              There is always a tension between providing out-of-the-box
+              services for publishing or digital exhibits, but there's often
+              desire on part of the project partner to implement custom
+              development or other forms of customization. The challenge is
+              using the resources and skills at our disposal to provide
+              high-quality services to our communities while not overextending
+              ourselves.
+            </aside>
+          </section>
+        </section>
+
+        <!-- Despite all of those differences, what are the commons features of DS? -->
+        <section>
+          <section
+            data-transition="slide"
+            data-background="#9ae6ff"
+            data-background-transition="zoom"
+          >
+            <h3>
+              Despite the variety of DS flavors, what are the common defining
+              features?
+            </h3>
+            <aside class="notes">
+              Regardless of the physical instantiation, there are certain
+              commons features of Digital Scholarship right now that you see
+              regardless of the methodologies supported, facilities operated,
+              etc. These are heavily informed by a great article that I read by
+              Micah Vandegrift on the various ecologies of DS.
+            </aside>
+          </section>
+          <section>
+            Typically project-based
+            <aside class="notes">
+              Project based, but service-infused (ie, projects are the tip of
+              the spear but there are a host of services that are easily
+              accessible if you ask). This goes back to the pyramid model.
+              Projects are the most high profile type of work that DS -- and
+              it's a field that will always have a heavy tendency to embrace
+              projects -- but orientation towards providing routine services.
+            </aside>
+          </section>
+          <section>
+            Strives for open by default
+            <aside class="notes">
+              DS as a field leans towards openness, open access for the outputs
+              and means of producing those outputs. Interested in publishing for
+              consumption beyond the academy – public engagement.
+            </aside>
+          </section>
+          <section>
+            Predisposed to new research methods and technologies
+            <aside class="notes">
+              Technology-dependent and generally very interested in innovative
+              ideas, new tools, new methods for answering questions.
+            </aside>
+          </section>
+          <section>
+            Platform/tool agnostic
+            <aside class="notes">
+              Related to technology-oriented, not necessarily tied to any one
+              technology or tool. The platform is not the solution -- just a
+              tool to solve a problem. It shares this with software development
+              in many respects.
+            </aside>
+          </section>
+          <section>
+            Interested in lifecycle issues
+            <aside class="notes">
+              DS tends to be interested in research lifecycle issues – metadata
+              creation, project management, and publishing/distribution.
+            </aside>
+          </section>
+          <section>
+            Highly collaborative and oriented towards partnerships
+            <aside class="notes">
+              <ul>
+                <li>
+                  It’s a field that partners with wide variety of groups and is
+                  based on meaningful collaborations between researcher and
+                  librarian/staffer. Often serves as connective tissue between
+                  different groups, connecting patrons/partners with resources,
+                  tools, and techniques.
+                </li>
+              </ul>
+            </aside>
+          </section>
+        </section>
+
+        <!-- What is the future of Digital Scholarship? -->
+        <section>
+          <section
+            data-transition="slide"
+            data-background="#ffd24d"
+            data-background-transition="zoom"
+          >
+            <h3>
+              What is the future of DS?
+            </h3>
+            <aside class="notes">
+              So, this leads me to thinking about the future of DS. I'm not
+              great at prognosticating the future, but I think that all of these
+              common features serve as foundation underpinning what is to come
+              and influences my thinking. I also want to focus on what I think
+              _could_ be the future here at Penn, as opposed to the future more
+              generally.
+            </aside>
+          </section>
+          <section>
+            Entrenched presence across university
+            <aside class="notes">
+              <ul>
+                <li>
+                  Normalize and entrench the presence of DS in the university.
+                  There's a recommendation to institute a center. Facilities
+                  create presence; space matters). Focus on interactive spaces
+                  where students, faculty, and others are encouraged to
+                  physically connect around technology and tools. The idea is to
+                  normalize the digital scholarship department/center as a
+                  location where people can come for big collaborative projects,
+                  small one-of helping things, and ongoing regular series of
+                  workshops on popular topics.
+                </li>
+                <li>
+                  Caveat here is that a center can silo off activity (center
+                  while also remaining somewhat de-centered). The downside is
+                  that a distinct Center can be isolating, it puts the
+                  activities of this group in a box distinct from the
+                  traditional library activities. The future is where we have
+                  entrench existing partnerships, established new dotted line
+                  connections with liaisons in every discipline, and effectively
+                  normalized the presence of DS in the univeristy through our
+                  parnterships, services, and publications.
+                </li>
+                <li>
+                  I think the future also is one in which we more systmetically
+                  integrate DS' outputs and infrastructure in the internal
+                  workings of the Libraries. Essentially, stronger integration
+                  between DS work and broader library system. For instance, how
+                  do we include the outputs of digital scholarship in the
+                  collection development activities of the libraries? How do we
+                  meaningful preserve the outputs of these projects? Duture of
+                  DS is an integreated approach to the outputs and maintenance
+                  of these materials in the Library system.
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            Community-building as increasingly significant activity of DS units
+            <aside class="notes">
+              I think there will be more and more focus on intentionality in
+              community building. The idea that digital projects aren’t merely
+              technical collaborations but social enterprises that engage whole
+              communities around ideas, methodologies, and areas of study. I
+              think it's also about creating a broader community of practice, of
+              shared interests in technology and new technologies, of trying to
+              create experiences and understanding that is current and expansive
+              in all of the ways that technology affords (but also recognizing
+              the materiality of life and the essential roles libraries play in
+              a familiar sense). Hub of activity and learning for a broad array
+              of people. I think public programming as well is important. What
+              can we do to engage with the community of developers out there?
+              What about the general public? That relates to my next thought.
+            </aside>
+          </section>
+          <section>
+            Focus on research outputs with impact beyond the university
+            <aside class="notes">
+              DS as externally engagement -- Emphasize community outreach and
+              building beyond the academy in permanent positions. We live in an
+              age where academics _need_ to translate their research for the
+              greater good, and the community outreach + relationship building
+              component needs to be intentional and emphasized.
+            </aside>
+          </section>
+          <section>
+            Further integration with the research process/lifecycle
+            <aside class="notes">
+              There is only going to be further integration with the research
+              process; continue to see DS as a co-creator in the research
+              process, valued advisor on projects and research initiatives.
+            </aside>
+          </section>
+          <section>
+            Reflective of trends in technology and modes of scholarly expression
+            <aside class="notes">
+              Reflective of trends in technology and modes of scholarly
+              expression (VR/AR, machine learning, data science, wearable
+              technologies and other internet connected devices).
+            </aside>
+          </section>
+          <section>
+            Still true to its defining features
+            <aside class="notes">
+              Building on #5, I think DS is going to continue to be a field that
+              is platform-agnostic and prone towards experimentation (while
+              still being entrenched in the system and no longer seen as "new").
+              Set up structures and workflows that allow for experimentation and
+              quick pilots. Don’t belabor the process through overly elaborate
+              approval process. If a tool is going to be used, discuss the
+              merits and red flags with the partner. Hold events to whet
+              appetites and encourage understanding. If kernel of idea emerges,
+              triage it. The process of pushing things down the pyramid of
+              experimental to service to rote is essential to this work.
+            </aside>
+          </section>
+        </section>
+
+        <!-- References -->
+        <section>
+          <section>
+            <h3>References</h3>
+          </section>
+          <section>
+            ACRL EBSS Spring Current Topics Discussion. (2018, March).
+            https://www.youtube.com/watch?v=q6679dkLFic&feature=youtu.be
+          </section>
+          <section>
+            Allen, Laurie. (2019, Marc 31). Our First Map Room / Map Table.
+            https://penntrl.wordpress.com/2019/03/31/our-first-map-room-map-table/.
+          </section>
+          <section>
+            Associate of Research Libraries Digital Scholarship Profiles,
+            https://www.arl.org/arl-terms/digital-scholarship-profiles/
+          </section>
+          <section>
+            Bailey, Charles W. (2019, June 28). Research Data Curation
+            Bibliography. http://digital-scholarship.org/rdcb/rdcb.htm
+          </section>
+          <section>
+            Boeing, G. Urban spatial order: street network orientation,
+            configuration, and entropy. Appl Netw Sci 4, 67 (2019)
+            doi:10.1007/s41109-019-0189-1
+          </section>
+          <section>
+            dSharp (Scoping Digital Scholarship),
+            https://dsharp.library.cmu.edu/category/research/digital-scholarship/
+          </section>
+          <section>
+            Van Pelt Library image courtesy of Chen Yu Ming on Flickr -
+            https://www.flickr.com/photos/chenyuming/15521662695/. Used under a
+            CC BY-NC-ND 2.0 license
+            (https://creativecommons.org/licenses/by-nc-nd/2.0/).
+          </section>
+          <section>
+            Moritz, C. (2017, October 13). An annotated bibliography of Digital
+            Scholarship in libraries. https://doi.org/10.31229/osf.io/nejzc
+          </section>
+          <section>
+            Moritz, C., Smart, R., Retteen, A., Hunter, M., Stanley, S., Soper,
+            D., & Vandegrift, M. (2017, August 7). De-Centering and Recentering
+            Digital Scholarship: A Manifesto.
+            https://doi.org/10.31229/osf.io/t7hfu
+          </section>
+          <section>
+            Rawson, K., & Munoz, T. (2018, October 17). Toward collective models
+            of digital scholarship. Retrieved from osf.io/j7qvk
+          </section>
+          <section>
+            Rumsey, Abby Smith. Scholarly Communication Institute 9: New-Model
+            Scholarly Communication: Road Map for Change (Charlottesville,
+            Virginia: Scholarly Communication Institute and University of
+            Virginia Library, 2011), 2,
+            http://uvasci.org/institutes-2003-2011/SCI-9-Road-Map-for-Change.pdf
+          </section>
+          <section>
+            Vandegrift, M. (2018, January 17). Designing Digital Scholarship
+            Ecologies. https://doi.org/10.31229/osf.io/93zvb
+          </section>
+        </section>
+
+        <!-- Thank you -->
+        <section
+          data-transition="slide"
+          data-background="#b5533c"
+          data-background-transition="zoom"
+        >
+          <p>Thank you!</p>
+        </section>
+      </div>
+    </div>
+
+    <script src="../../js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: "../../plugin/markdown/marked.js" },
+          { src: "../../plugin/markdown/markdown.js" },
+          { src: "../../plugin/notes/notes.js", async: true },
+          { src: "../../plugin/highlight/highlight.js", async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>
