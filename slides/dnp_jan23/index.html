@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/reveal.css" />
+    <link rel="stylesheet" href="../../css/theme/white.css" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../../lib/css/monokai.css" />
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "../../css/print/pdf.css"
+        : "../../css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Copy this template into a new folder within /slides -->
+        <section>
+          <section data-background="black">
+            DNP Projects on ScholarlyCommons
+          </section>
+          <section>
+            <a
+              href="https://repository.upenn.edu/dnp/"
+              target="_blank"
+              rel="noopener"
+              ><img src="images/dnp.png"
+            /></a>
+          </section>
+        </section>
+
+        <section>
+          <section data-background="black">
+            Benefits of having work on SC
+          </section>
+          <section>
+            <h3>Increased visibility & impact</h3>
+            <p>
+              Student's work will be openly accessible to researchers around the
+              world and showcased alongside other members of the Penn community.
+              OA works are known to receive more citations and greater impact.
+            </p>
+          </section>
+          <section>
+            <h3>Permanent links</h3>
+            <p>
+              ScholarlyCommons provides permanent URLs (no dead links!) for each
+              work, meaning students can reliably link to their project on
+              resumes, websites, etc.
+            </p>
+          </section>
+          <section>
+            <h3>"Proof" of scholarly discovery</h3>
+            <p>
+              Having your work online serves as a time-stamped indication of
+              your claim to a scholarly idea, reducing likelihood of getting
+              "scooped".
+            </p>
+          </section>
+          <section>
+            <h3>Participation in showcase of DNP scholarship</h3>
+            <p>
+              Participation in the collection demonstrates quality of work and
+              sits alongside other scholars who have graduated from the DNP
+              program.
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section data-background="black">
+            Disadvantages of having work on SC
+          </section>
+          <section>
+            <h3>Requires slightly more overhead when publishing</h3>
+            <p>
+              Some publishers may not accept work that has been posted on a
+              preprint server or IR. Students should look into publisher
+              policies related to preprint sharing prior to submission, or
+              embargo work for 1-3 years.
+            </p>
+          </section>
+          <section>
+            <h3>Some students prefer privacy</h3>
+            <p>
+              There are some students who prefer to not distribute their work
+              publicly for one reason or another. This sentiment varies from
+              discipline to discipline. Having a flexible posting policy -- with
+              opt-ins or embargoes -- is a good idea if this is a concern.
+            </p>
+          </section>
+        </section>
+
+        <section data-background="black">
+          Questions?
+        </section>
+      </div>
+    </div>
+
+    <script src="../../js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: "../../plugin/markdown/marked.js" },
+          { src: "../../plugin/markdown/markdown.js" },
+          { src: "../../plugin/notes/notes.js", async: true },
+          { src: "../../plugin/highlight/highlight.js", async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>
